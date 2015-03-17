@@ -62,9 +62,9 @@ All JBChartView implementations have a similiar data source and delgate pattern 
 To use JBCartView in a Swift project add the following to your bridging header (JBChartView-Bridging-Header.h):
 
 	#import <UIKit/UIKit.h>
-	#import "JBChartView/JBChartView.h"
-	#import "JBChartView/JBBarChartView.h"
-	#import "JBChartView/JBLineChartView.h"
+	#import "JBChartView.h"
+	#import "JBBarChartView.h"
+	#import "JBLineChartView.h"
 
 For more information about adding bridging headers see <a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html" target="_blank">Swift and Objective-C in the Same Project</a>.
 
@@ -86,7 +86,7 @@ At a minimum, you need to inform the data source how many bars are in the chart:
 
 Secondly, you need to inform the delegate the height of each bar (automatically normalized across the entire chart):
     
-    - (CGFloat)barChartView:(JBBarChartView *)barChartView heightForBarViewAtAtIndex:(NSUInteger)index
+    - (CGFloat)barChartView:(JBBarChartView *)barChartView heightForBarViewAtIndex:(NSUInteger)index
     {
 		return ...; // height of bar at index
 	}
